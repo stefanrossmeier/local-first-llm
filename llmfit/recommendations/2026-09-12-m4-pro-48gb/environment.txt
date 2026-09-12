@@ -1,0 +1,7 @@
+captured_at_utc=2026-09-12T11:25:49Z
+repo_commit=613d84e35b1e749477eb6a6ea0a8bbe76324bf36
+macos_version=15.7.4
+macos_build=24G517
+architecture=arm64
+llmfit_version=llmfit 1.1.15
+omlx_version=0.6.4

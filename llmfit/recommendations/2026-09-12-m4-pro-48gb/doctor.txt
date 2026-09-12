@@ -1,0 +1,118 @@
+# llmfit doctor report
+
+Paste this whole report into a GitHub issue at https://github.com/AlexsJones/llmfit/issues — the raw tool output below is what lets detection bugs become regression tests. It contains hardware model names and driver info only.
+
+- llmfit version: 1.1.15
+- OS: macos (aarch64)
+
+## Detected by llmfit
+```
+SystemSpecs {
+    total_ram_gb: 48.0,
+    available_ram_gb: 44.855010986328125,
+    total_cpu_cores: 14,
+    cpu_name: "Apple M4 Pro",
+    has_gpu: true,
+    gpu_vram_gb: Some(
+        48.0,
+    ),
+    total_gpu_vram_gb: Some(
+        48.0,
+    ),
+    gpu_available_gb: Some(
+        36.0,
+    ),
+    gpu_name: Some(
+        "Apple M4 Pro",
+    ),
+    gpu_count: 1,
+    unified_memory: true,
+    backend: Metal,
+    gpus: [
+        GpuInfo {
+            name: "Apple M4 Pro",
+            vram_gb: Some(
+                48.0,
+            ),
+            backend: Metal,
+            count: 1,
+            unified_memory: true,
+        },
+    ],
+    cluster_mode: false,
+    cluster_node_count: 0,
+}
+```
+
+## nvidia-smi (extended query)
+```
+(not available: No such file or directory (os error 2))
+```
+
+## nvidia-smi (standard query)
+```
+(not available: No such file or directory (os error 2))
+```
+
+## rocm-smi --showmeminfo vram
+```
+(not available: No such file or directory (os error 2))
+```
+
+## rocm-smi --showproductname
+```
+(not available: No such file or directory (os error 2))
+```
+
+## system_profiler SPDisplaysDataType
+```
+Graphics/Displays:
+
+    Apple M4 Pro:
+
+      Chipset Model: Apple M4 Pro
+      Type: GPU
+      Bus: Built-In
+      Total Number of Cores: 20
+      Vendor: Apple (0x106b)
+      Metal Support: Metal 3
+      Displays:
+        Color LCD:
+          Display Type: Built-in Liquid Retina XDR Display
+          Resolution: 3456 x 2234 Retina
+          Main Display: Yes
+          Mirror: Off
+          Online: Yes
+          Automatically Adjust Brightness: No
+          Connection Type: Internal
+        HP Z24n:
+          Resolution: 1920 x 1200 (WUXGA - Widescreen Ultra eXtended Graphics Array)
+          UI Looks like: 1920 x 1200 @ 60.00Hz
+          Mirror: Off
+          Online: Yes
+          Rotation: Supported
+        HP Z24n:
+          Resolution: 1920 x 1200 (WUXGA - Widescreen Ultra eXtended Graphics Array)
+          UI Looks like: 1920 x 1200 @ 60.00Hz
+          Mirror: Off
+          Online: Yes
+          Rotation: Supported
+```
+
+## vulkaninfo --summary
+```
+(not available: No such file or directory (os error 2))
+```
+
+## npu-smi info
+```
+(not available: No such file or directory (os error 2))
+```
+
+## Provider app installs
+```
+LM Studio installed: false
+Docker Desktop installed: true
+ollama on PATH: false
+```
+
