@@ -1,0 +1,9 @@
+captured_at_utc=2026-09-12T11:34:57Z
+repo_commit=99faa4fab7eaab96330ddace0c84ed3b390448eb
+model=Qwen3.8-27B-4bit
+provider=mlx
+provider_url=http://127.0.0.1:8000
+macos_version=15.7.4
+macos_build=24G517
+llmfit_version=llmfit 1.1.15
+omlx_version=0.6.4
