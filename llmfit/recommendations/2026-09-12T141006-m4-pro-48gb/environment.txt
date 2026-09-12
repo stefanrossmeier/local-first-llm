@@ -1,0 +1,10 @@
+captured_at_utc=2026-09-12T12:10:06Z
+repo_commit=321b7525f40b3a7f5363bb5812d9fa408b602976
+macos_version=15.7.4
+macos_build=24G517
+architecture=arm64
+llmfit_version=llmfit 1.1.15
+omlx_version=0.6.4
+profile=m4-pro-48gb
+baseline_store=temporary-empty-local-store
+experiment_store=llmfit/.bench-store

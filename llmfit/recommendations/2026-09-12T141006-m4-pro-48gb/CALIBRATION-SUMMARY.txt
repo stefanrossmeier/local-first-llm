@@ -1,0 +1,27 @@
+baseline recommendations:
+  model rows: 400
+  estimate confidence:
+    calibrated: 386
+    measured_community: 14
+  calibration factors:
+    2.504147: 200 rows
+    2.504217: 200 rows
+
+personalized recommendations:
+  model rows: 400
+  estimate confidence:
+    calibrated: 385
+    measured_community: 15
+  calibration factors:
+    2.504147: 200 rows
+    2.504217: 200 rows
+
+baseline full fit tables:
+  model rows: 500
+  estimate confidence:
+    calibrated: 484
+    measured_community: 16
+  calibration factors:
+    2.504147: 250 rows
+    2.504217: 250 rows
+

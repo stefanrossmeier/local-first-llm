@@ -1,0 +1,8 @@
+ M .gitignore
+ M llmfit/README.md
+ M llmfit/scripts/benchmark-model.sh
+ M llmfit/scripts/capture-recommendations.sh
+ M llmfit/scripts/share-benchmarks.sh
+?? llmfit/recommendations/2026-09-12-m4-pro-48gb/NOTE.md
+?? llmfit/recommendations/2026-09-12T141006-m4-pro-48gb/
+?? llmfit/scripts/record-contribution.sh

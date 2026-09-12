@@ -1,15 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "This will submit pending llmfit benchmark measurements upstream."
-echo
-echo "llmfit will:"
-echo "  1. authenticate with GitHub"
-echo "  2. fork AlexsJones/llmfit if necessary"
-echo "  3. commit pending benchmark files"
-echo "  4. create or update a pull request"
-echo
-echo "Nothing is submitted until you confirm inside llmfit."
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+STORE="$ROOT/llmfit/.bench-store"
+
+export LLMFIT_BENCH_STORE="$STORE"
+
+echo "llmfit benchmark store:"
+echo "  $LLMFIT_BENCH_STORE"
 echo
 
-llmfit bench --share
+case "${1:-}" in
+  "")
+    llmfit bench --share
+    ;;
+  --dry-run)
+    llmfit bench --share --dry-run
+    ;;
+  --yes)
+    llmfit bench --share --yes
+    ;;
+  *)
+    echo "Usage:"
+    echo "  $0"
+    echo "  $0 --dry-run"
+    echo "  $0 --yes"
+    exit 1
+    ;;
+esac

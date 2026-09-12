@@ -1,0 +1,106 @@
+{
+  "models": [
+    {
+      "best_quant": "mlx-8bit",
+      "capabilities": [
+        "Tool Use"
+      ],
+      "capability_ids": [
+        "tool_use"
+      ],
+      "category": "Coding",
+      "context_length": 262144,
+      "disk_size_gb": 30.53,
+      "effective_context_length": 32768,
+      "estimate_basis": {
+        "assumed_context": 32768,
+        "ddr_bandwidth_gbps": null,
+        "efficiency": 0.55,
+        "gpu_bandwidth_gbps": 273.0,
+        "local_calibration": null,
+        "method": "gpu_bandwidth_roofline"
+      },
+      "estimate_confidence": "estimated",
+      "estimate_confidence_label": "estimated",
+      "estimated_tps": 39.1,
+      "fit_label": "Perfect",
+      "fit_level": "Perfect",
+      "gguf_sources": [
+        {
+          "provider": "unsloth",
+          "repo": "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF"
+        },
+        {
+          "provider": "mradermacher",
+          "repo": "mradermacher/Qwen3-Coder-30B-A3B-Instruct-GGUF"
+        }
+      ],
+      "installed": false,
+      "is_moe": true,
+      "license": "apache-2.0",
+      "measured_tps": null,
+      "memory_available_gb": 48.0,
+      "memory_required_gb": 15.6,
+      "moe_offloaded_gb": null,
+      "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "notes": [
+        "Context capped at 32768 tokens for estimation (model supports up to 262144; use --max-context to override)",
+        "Unified memory: GPU and CPU share the same pool",
+        "MoE: 8/128 experts active (all share unified memory pool)",
+        "Best quantization for hardware: mlx-8bit (model default: Q4_K_M)",
+        "Baseline estimated speed: 39.1 tok/s"
+      ],
+      "ollama_name": "qwen3-coder",
+      "parameter_count": "30.5B",
+      "params_b": 30.53,
+      "prefill_tps": null,
+      "provider": "Alibaba",
+      "release_date": "2025-07-31",
+      "run_mode": "GPU",
+      "run_mode_label": "GPU",
+      "runtime": "MLX",
+      "runtime_label": "MLX",
+      "score": 87.2,
+      "score_components": {
+        "context": 100.0,
+        "fit": 100.0,
+        "quality": 75.2,
+        "speed": 97.8
+      },
+      "supports_tp": [
+        1,
+        2,
+        4
+      ],
+      "total_memory_gb": 15.6,
+      "ttft_ms": null,
+      "usable_context": 185334,
+      "use_case": "Code generation and completion",
+      "utilization_pct": 32.5,
+      "verify_command": null
+    }
+  ],
+  "system": {
+    "available_ram_gb": 44.73,
+    "backend": "Metal",
+    "cpu_cores": 14,
+    "cpu_name": "Apple M4 Pro",
+    "gpu_available_gb": 36.0,
+    "gpu_count": 1,
+    "gpu_name": "Apple M4 Pro",
+    "gpu_vram_gb": 48.0,
+    "gpus": [
+      {
+        "backend": "Metal",
+        "count": 1,
+        "memory_bandwidth_gbps": 273.0,
+        "name": "Apple M4 Pro",
+        "unified_memory": true,
+        "vram_gb": 48.0
+      }
+    ],
+    "has_gpu": true,
+    "total_ram_gb": 48.0,
+    "unified_memory": true
+  }
+}
