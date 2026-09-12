@@ -431,3 +431,17 @@ Update/re-download the model files:
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
+
+## Model selection with llmfit
+
+This repository also records model-fit recommendations and standardized
+inference measurements using `llmfit`.
+
+See [`llmfit/`](llmfit/) for:
+
+- coding-model recommendations for the M4 Pro / 48 GB profile;
+- 32K and 64K context comparisons;
+- measured local benchmarks;
+- reproducible benchmark scripts;
+- upstream benchmark contributions to the llmfit community dataset.
+
