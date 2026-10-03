@@ -11,3 +11,7 @@ logs/*
 # llmfit local pending/shared benchmark state.
 # Reproducible exported results live under llmfit/benchmarks/.
 llmfit/.bench-store/
+
+# whichllm live Hugging Face / benchmark cache.
+# Point-in-time exported captures live under whichllm/recommendations/.
+whichllm/.cache/

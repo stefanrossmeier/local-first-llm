@@ -1,0 +1,11 @@
+captured_at_utc=2026-10-03T16:01:51Z
+repo_commit=96fab1e70bbfd56a156fa5611e236779bd5f1ee8
+macos_version=15.7.4
+macos_build=24G517
+architecture=arm64
+whichllm_version=0.5.20
+whichllm_requested_spec=whichllm@latest
+whichllm_resolved_spec=whichllm@0.5.20
+profile=m4-pro-48gb
+capture_top=100
+cache_root=/Users/stefanrossmeier/repos/public-ai-github/local-first-llm/whichllm/.cache

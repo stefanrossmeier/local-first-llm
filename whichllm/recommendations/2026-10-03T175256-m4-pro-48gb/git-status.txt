@@ -1,0 +1,8 @@
+ M .gitignore
+ M README.md
+ M llmfit/scripts/benchmark-model.sh
+?? llmfit/benchmarks/Qwen3.8-27B-4bit/2026-09-12T142609/
+?? llmfit/benchmarks/Qwen3.8-27B-4bit/2026-09-12T144441/
+?? llmfit/scripts/benchmark-omlx.py
+?? local-first-llm.zip
+?? whichllm/

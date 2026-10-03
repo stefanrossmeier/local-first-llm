@@ -1,0 +1,2862 @@
+
+{
+  "hardware": {
+    "gpus": [
+      {
+        "name": "Apple M4 Pro",
+        "vendor": "apple",
+        "vram_bytes": 51539607552,
+        "usable_vram_bytes": 49392123904,
+        "memory_bandwidth_gbps": 273.0,
+        "shared_memory": true
+      }
+    ],
+    "cpu": "Apple M4 Pro",
+    "cpu_cores": 14,
+    "ram_bytes": 51539607552,
+    "ram_budget_bytes": null,
+    "budget_notes": [
+      "VRAM headroom: 2.0 GB reserved per GPU"
+    ],
+    "os": "darwin"
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model_id": "Qwen/Qwen3.6-27B",
+      "artifact_repo_id": "batiai/Qwen3.6-27B-GGUF",
+      "artifact_filename": "Qwen-Qwen3.6-27B-Q3_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27781427952,
+      "published_at": "2026-04-21T07:50:43.000Z",
+      "downloads": 2451011,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 12154374729,
+      "vram_required_bytes": 19739554087,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.209029875715295,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.5,
+        14.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 83.61,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 2,
+      "model_id": "Qwen/Qwen3-30B-A3B",
+      "artifact_repo_id": "Qwen/Qwen3-30B-A3B-GGUF",
+      "artifact_filename": "Qwen3-30B-A3B-Q8_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 30532122624,
+      "published_at": "2025-04-27T03:43:05.000Z",
+      "downloads": 1496879,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 32440380288,
+      "vram_required_bytes": 36189666432,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 31.60376470588235,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        11.1,
+        63.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 82.78,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 3,
+      "model_id": "Qwen/Qwen3.8-27B",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27781427952,
+      "published_at": "2026-08-05T08:22:59.000Z",
+      "downloads": 6895117,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 12154374729,
+      "vram_required_bytes": 19739554087,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.209029875715295,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.5,
+        14.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 82.52,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 4,
+      "model_id": "google/gemma-4-31B-it",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 31273088876,
+      "published_at": "2026-03-11T18:22:36.000Z",
+      "downloads": 9875118,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 13681976383,
+      "vram_required_bytes": 21956551062,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.180835638561268,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.9,
+        13.1
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 82.16,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 5,
+      "model_id": "google/gemma-4-26B-A4B-it",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 25805936206,
+      "published_at": "2026-03-11T21:25:57.000Z",
+      "downloads": 12963043,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 20967323167,
+      "vram_required_bytes": 25156418949,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 36.25263157959574,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        12.7,
+        72.5
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 81.42,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 6,
+      "model_id": "openai/gpt-oss-20b",
+      "artifact_repo_id": "unsloth/gpt-oss-20b-GGUF",
+      "artifact_filename": "gpt-oss-20b-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 20914757184,
+      "published_at": "2025-08-04T22:33:29.000Z",
+      "downloads": 6574377,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 16993240212,
+      "vram_required_bytes": 20230114912,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 38.266666666666666,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        13.4,
+        76.5
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 78.09,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 7,
+      "model_id": "Qwen/Qwen3.6-35B-A3B",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35951822704,
+      "published_at": "2026-04-15T05:59:19.000Z",
+      "downloads": 3311432,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 38198811623,
+      "vram_required_bytes": 41948097767,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 31.60376470588235,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        11.1,
+        63.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 77.91,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 8,
+      "model_id": "Qwen/Qwen3.5-35B-A3B",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35951822704,
+      "published_at": "2026-02-24T09:39:25.000Z",
+      "downloads": 1587887,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 38198811623,
+      "vram_required_bytes": 41948097767,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 31.60376470588235,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        11.1,
+        63.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 77.52,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 9,
+      "model_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "artifact_repo_id": "unsloth/Qwen3-Next-80B-A3B-Instruct-GGUF",
+      "artifact_filename": "Qwen3-Next-80B-A3B-Instruct-Q3_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 81324862720,
+      "published_at": "2025-09-09T15:40:56.000Z",
+      "downloads": 285920,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 35579627440,
+      "vram_required_bytes": 39328913584,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 59.000055679054064,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        20.7,
+        118.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 73.89,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 10,
+      "model_id": "Qwen/Qwen3-14B",
+      "artifact_repo_id": "MaziyarPanahi/Qwen3-14B-GGUF",
+      "artifact_filename": "Qwen3-14B.Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 14768307200,
+      "published_at": "2025-04-27T03:42:45.000Z",
+      "downloads": 2691298,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 11999249600,
+      "vram_required_bytes": 17015111734,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.328083316143369,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.6,
+        14.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 71.79,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 11,
+      "model_id": "Qwen/Qwen3.5-27B",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27781427952,
+      "published_at": "2026-02-24T09:41:56.000Z",
+      "downloads": 1871002,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 12154374729,
+      "vram_required_bytes": 19739554087,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.209029875715295,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.5,
+        14.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 70.6,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 12,
+      "model_id": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 24011361280,
+      "published_at": "2025-06-19T17:41:13.000Z",
+      "downloads": 255980,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 13506390720,
+      "vram_required_bytes": 20347206184,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.115906873453754,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.5,
+        14.6
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 70.4,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 13,
+      "model_id": "microsoft/phi-4",
+      "artifact_repo_id": "MaziyarPanahi/phi-4-GGUF",
+      "artifact_filename": "phi-4.Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 14659507200,
+      "published_at": "2024-12-11T11:47:29.000Z",
+      "downloads": 472334,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 11910849600,
+      "vram_required_bytes": 16905230207,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.397314529099587,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.6,
+        15.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 70.26,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "mit"
+    },
+    {
+      "rank": 14,
+      "model_id": "Qwen/QwQ-32B",
+      "artifact_repo_id": "MaziyarPanahi/QwQ-32B-GGUF",
+      "artifact_filename": "QwQ-32B.Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 32763876352,
+      "published_at": "2025-03-05T14:16:59.000Z",
+      "downloads": 56293,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 18429680448,
+      "vram_required_bytes": 26998596969,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 6.680690983622637,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.0,
+        10.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 69.12,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 15,
+      "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "artifact_repo_id": "bartowski/DeepSeek-R1-Distill-Qwen-32B-GGUF",
+      "artifact_filename": "DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 32763876352,
+      "published_at": "2025-01-20T09:19:00.000Z",
+      "downloads": 440937,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 18429680448,
+      "vram_required_bytes": 26998596969,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 6.680690983622637,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.0,
+        10.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 68.8,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "mit"
+    },
+    {
+      "rank": 16,
+      "model_id": "zai-org/GLM-4.7-Flash",
+      "artifact_repo_id": "unsloth/GLM-4.7-Flash-GGUF",
+      "artifact_filename": "GLM-4.7-Flash-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 31221488576,
+      "published_at": "2026-01-19T06:28:10.000Z",
+      "downloads": 1752526,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 25367459468,
+      "vram_required_bytes": 34064604044,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 11.479999999999999,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        4.0,
+        23.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 67.63,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "mit"
+    },
+    {
+      "rank": 17,
+      "model_id": "google/gemma-3-27b-it",
+      "artifact_repo_id": "MaziyarPanahi/gemma-3-27b-it-GGUF",
+      "artifact_filename": "gemma-3-27b-it.Q3_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27432406640,
+      "published_at": "2025-03-01T19:10:19.000Z",
+      "downloads": 417382,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 12001677905,
+      "vram_required_bytes": 16917114225,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.32619596076387,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.6,
+        14.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 66.11,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "gemma"
+    },
+    {
+      "rank": 18,
+      "model_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 24011361280,
+      "published_at": "2025-03-11T17:04:58.000Z",
+      "downloads": 543433,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 13506390720,
+      "vram_required_bytes": 20347206184,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.115906873453754,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.5,
+        14.6
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 65.14,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 19,
+      "model_id": "mistralai/Devstral-Small-2505",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 23572403200,
+      "published_at": "2025-05-12T21:49:21.000Z",
+      "downloads": 1792,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 13259476800,
+      "vram_required_bytes": 20013624156,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.285660502079539,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.6,
+        14.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 64.34,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 20,
+      "model_id": "Qwen/Qwen2.5-32B-Instruct",
+      "artifact_repo_id": "bartowski/Qwen2.5-32B-Instruct-GGUF",
+      "artifact_filename": "Qwen2.5-32B-Instruct-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 32763876352,
+      "published_at": "2024-09-17T04:17:55.000Z",
+      "downloads": 1911205,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 18429680448,
+      "vram_required_bytes": 26998596969,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 6.680690983622637,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.0,
+        10.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 60.5,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 21,
+      "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+      "artifact_repo_id": "bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF",
+      "artifact_filename": "DeepSeek-R1-Distill-Qwen-14B-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 14770033664,
+      "published_at": "2025-01-20T09:18:27.000Z",
+      "downloads": 337308,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 12000652352,
+      "vram_required_bytes": 17016855360,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.326992959790724,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.6,
+        14.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 59.86,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "mit"
+    },
+    {
+      "rank": 22,
+      "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+      "artifact_repo_id": "MaziyarPanahi/Llama-3.3-70B-Instruct-GGUF",
+      "artifact_filename": "Llama-3.3-70B-Instruct.Q3_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 70553706496,
+      "published_at": "2024-11-26T16:08:47.000Z",
+      "downloads": 414491,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 30867246592,
+      "vram_required_bytes": 46897406525,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 3.6261737718131744,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        2.2,
+        5.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 59.84,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "llama3.3"
+    },
+    {
+      "rank": 23,
+      "model_id": "google/gemma-3-12b-it",
+      "artifact_repo_id": "MaziyarPanahi/gemma-3-12b-it-GGUF",
+      "artifact_filename": "gemma-3-12b-it.Q5_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 12187325040,
+      "published_at": "2025-03-01T19:11:34.000Z",
+      "downloads": 491997,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 8378785965,
+      "vram_required_bytes": 11729592648,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 13.893086717605394,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        8.3,
+        22.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 59.3,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "gemma"
+    },
+    {
+      "rank": 24,
+      "model_id": "bytkim/Qwen3.6-27B-MTP-pi-tune-GGUF",
+      "artifact_repo_id": "bytkim/Qwen3.6-27B-MTP-pi-tune-GGUF",
+      "artifact_filename": "Qwen3.6-27B-MTP-pi-tune-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-06-02T08:31:19.000Z",
+      "downloads": 247277,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15367892544,
+      "vram_required_bytes": 22862105116,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.011703598752078,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.8,
+        12.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 63.24,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 25,
+      "model_id": "logic65/Qwen3.8-Whittle-16B",
+      "artifact_repo_id": "logic65/Qwen3.8-Whittle-16B",
+      "artifact_filename": "Qwen3.8-Whittle-16B-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 16344368864,
+      "published_at": "2026-10-03T13:33:36.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 9193707486,
+      "vram_required_bytes": 14520748042,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 13.392094558967568,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        8.0,
+        21.4
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 62.8,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 26,
+      "model_id": "Qwen/Qwen3-32B",
+      "artifact_repo_id": "MaziyarPanahi/Qwen3-32B-GGUF",
+      "artifact_filename": "Qwen3-32B.Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 32762123264,
+      "published_at": "2025-04-27T03:52:59.000Z",
+      "downloads": 3986798,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 18428694336,
+      "vram_required_bytes": 26997264727,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 6.6810484647022585,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.0,
+        10.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 55.71,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 27,
+      "model_id": "bartowski/Qwen_Qwen3-Next-80B-A3B-Thinking-GGUF",
+      "artifact_repo_id": "bartowski/Qwen_Qwen3-Next-80B-A3B-Thinking-GGUF",
+      "artifact_filename": "Qwen_Qwen3-Next-80B-A3B-Thinking-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 79674391296,
+      "published_at": "2025-09-09T19:41:34.000Z",
+      "downloads": 77498,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 44816845104,
+      "vram_required_bytes": 48566131248,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 51.52348396326332,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        18.0,
+        103.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 60.57,
+      "benchmark_status": "estimated",
+      "benchmark_source": "variant",
+      "benchmark_confidence": 0.55,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 28,
+      "model_id": "ibm-granite/granite-4.0-h-small",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 32207337984,
+      "published_at": "2025-09-16T19:50:49.000Z",
+      "downloads": 23745,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 18116627616,
+      "vram_required_bytes": 26575660916,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 6.796132404425086,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.1,
+        10.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 55.49,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 29,
+      "model_id": "Qwen/Qwen2.5-14B-Instruct",
+      "artifact_repo_id": "bartowski/Qwen2.5-14B-Instruct-GGUF",
+      "artifact_filename": "Qwen2.5-14B-Instruct-Q5_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 14770033664,
+      "published_at": "2024-09-16T11:56:10.000Z",
+      "downloads": 1632804,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 10154398144,
+      "vram_required_bytes": 15170601152,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 11.46372225603369,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        6.9,
+        18.3
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 54.12,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 30,
+      "model_id": "mistralai/Codestral-22B-v0.1",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 22247282688,
+      "published_at": "2024-05-29T11:28:50.000Z",
+      "downloads": 19244,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 12514096512,
+      "vram_required_bytes": 19006611396,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 9.838744641447752,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.9,
+        15.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 52.02,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "other"
+    },
+    {
+      "rank": 31,
+      "model_id": "haakona/Qwen-Unitopia-Style",
+      "artifact_repo_id": "haakona/Qwen-Unitopia-Style",
+      "artifact_filename": "gemma-4-31b/gemma-4-31b-unitopia-q4_k_m.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27000000000,
+      "published_at": "2026-10-02T03:15:38.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15187500000,
+      "vram_required_bytes": 22618393824,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.106864197530864,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.9,
+        13.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 53.75,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "other"
+    },
+    {
+      "rank": 32,
+      "model_id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "artifact_repo_id": "MaziyarPanahi/Qwen3-30B-A3B-Instruct-2507-GGUF",
+      "artifact_filename": "Qwen3-30B-A3B-Instruct-2507.Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 30532122624,
+      "published_at": "2025-07-28T07:31:27.000Z",
+      "downloads": 866418,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 24807349632,
+      "vram_required_bytes": 28556635776,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 51.51,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.45,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 33,
+      "model_id": "jkim96/Qwen3.5-122B-A10B-DASHQ-Q2-GGUF",
+      "artifact_repo_id": "jkim96/Qwen3.5-122B-A10B-DASHQ-Q2-GGUF",
+      "artifact_filename": "Qwen3.5-122B-A10B-DASHQ-Q2_K_XL.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 124635206144,
+      "published_at": "2026-10-03T14:12:19.000Z",
+      "downloads": 0,
+      "quant_type": "Q2_K",
+      "file_size_bytes": 38948501920,
+      "vram_required_bytes": 46546122400,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 32.235839999999996,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        11.3,
+        64.5
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 49.74,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 34,
+      "model_id": "Efso/Nemotron-3-Nano-30B-A3B-GR",
+      "artifact_repo_id": "Efso/Nemotron-3-Nano-30B-A3B-GR",
+      "artifact_filename": "Nemotron-3-Nano-30B-A3B-GR-v3c-Q8_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 31577940288,
+      "published_at": "2026-10-01T17:08:05.000Z",
+      "downloads": 0,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 33551561556,
+      "vram_required_bytes": 37300847700,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 31.60376470588235,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        11.1,
+        63.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 48.42,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "other"
+    },
+    {
+      "rank": 35,
+      "model_id": "selorahomes/Selora-AI-LLM-14B",
+      "artifact_repo_id": "selorahomes/Selora-AI-LLM-14B",
+      "artifact_filename": "qwen3_14b_base.Q5_K_S.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 14768307200,
+      "published_at": "2026-10-02T17:39:46.000Z",
+      "downloads": 0,
+      "quant_type": "Q5_K_S",
+      "file_size_bytes": 10153211200,
+      "vram_required_bytes": 15169073334,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 11.465062403114397,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        6.9,
+        18.3
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 48.01,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 36,
+      "model_id": "ibm-granite/granite-4.1-30b",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 28865728512,
+      "published_at": "2026-04-06T13:19:18.000Z",
+      "downloads": 301518,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 12628756224,
+      "vram_required_bytes": 20428020439,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.863105599210591,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.3,
+        14.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 45.9,
+      "benchmark_status": "self_reported",
+      "benchmark_source": "self_reported",
+      "benchmark_confidence": 0.4,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 37,
+      "model_id": "empero-ai/Qwen3.8-35B-A3B-Distill-GGUF",
+      "artifact_repo_id": "empero-ai/Qwen3.8-35B-A3B-Distill-GGUF",
+      "artifact_filename": "Qwen3.8-35B-A3B-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35505251456,
+      "published_at": "2026-09-16T18:58:46.000Z",
+      "downloads": 519078,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 28848016808,
+      "vram_required_bytes": 32597302952,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 40.08,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 38,
+      "model_id": "Alittlehammmer/Qwen3.6-35B-A3B-DFlash-GGUF-llama.cpp",
+      "artifact_repo_id": "Alittlehammmer/Qwen3.6-35B-A3B-DFlash-GGUF-llama.cpp",
+      "artifact_filename": "Qwen3.6-35B-A3B-DFlash-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35000000000,
+      "published_at": "2026-06-29T05:20:28.000Z",
+      "downloads": 67050,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 28437500000,
+      "vram_required_bytes": 32186786144,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 36.52,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 39,
+      "model_id": "hesamation/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GGUF",
+      "artifact_repo_id": "hesamation/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GGUF",
+      "artifact_filename": "Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled.Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 34660610688,
+      "published_at": "2026-04-18T23:47:21.000Z",
+      "downloads": 113682,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 28161746184,
+      "vram_required_bytes": 31911032328,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 36.51,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 40,
+      "model_id": "logic65/Qwen3.8-Whittle-Next-19.8B-A10B-base",
+      "artifact_repo_id": "logic65/Qwen3.8-Whittle-Next-19.8B-A10B-base",
+      "artifact_filename": "Qwen3.8-Whittle-Next-19.8B-A10B-base-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 19774844179,
+      "published_at": "2026-10-03T13:33:53.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 11123349850,
+      "vram_required_bytes": 18720970330,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 21.888533334686198,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        7.7,
+        43.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 35.24,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 41,
+      "model_id": "unsloth/DeepSeek-R1-Distill-Llama-70B-GGUF",
+      "artifact_repo_id": "unsloth/DeepSeek-R1-Distill-Llama-70B-GGUF",
+      "artifact_filename": "DeepSeek-R1-Distill-Llama-70B-Q3_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 70553706560,
+      "published_at": "2025-01-20T14:59:13.000Z",
+      "downloads": 73675,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 30867246620,
+      "vram_required_bytes": 46897406565,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 3.6261737685238344,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        2.2,
+        5.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 34.6,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "llama3.3"
+    },
+    {
+      "rank": 42,
+      "model_id": "logic65/Qwen3.8-Whittle-MoE-27B-A17.8B-GGUF",
+      "artifact_repo_id": "logic65/Qwen3.8-Whittle-MoE-27B-A17.8B-GGUF",
+      "artifact_filename": "Whittle-MoE-27B-A18B-v2.2.1-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 26917297664,
+      "published_at": "2026-10-03T13:33:48.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15140979936,
+      "vram_required_bytes": 27026744390,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 12.296928838951311,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        4.3,
+        24.6
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 34.43,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 43,
+      "model_id": "esatapedico/Qwen3.8-27B-NVFP4-MTP-GGUF",
+      "artifact_repo_id": "esatapedico/Qwen3.8-27B-NVFP4-MTP-GGUF",
+      "artifact_filename": "Qwen3.8-27B-NVFP4-MTP-COMPACT-LOW.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27000000000,
+      "published_at": "2026-08-14T17:11:56.000Z",
+      "downloads": 759540,
+      "quant_type": "NVFP4",
+      "file_size_bytes": 15187500000,
+      "vram_required_bytes": 22618393824,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.254261728395063,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.0,
+        13.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 34.0,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 44,
+      "model_id": "outsourc-e/Qwen3.8-27B-Unleashed-GGUF",
+      "artifact_repo_id": "outsourc-e/Qwen3.8-27B-Unleashed-GGUF",
+      "artifact_filename": "Qwen3.8-27B-Unleashed-UD-IQ4_XS.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 26895998464,
+      "published_at": "2026-08-20T19:33:22.000Z",
+      "downloads": 39856,
+      "quant_type": "IQ4_XS",
+      "file_size_bytes": 13447999232,
+      "vram_required_bytes": 20858358939,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.656098055315534,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.2,
+        13.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.98,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 45,
+      "model_id": "LessThanThreeAI/Qwen3.8-27B-Humanlike-Chat-GGUF",
+      "artifact_repo_id": "LessThanThreeAI/Qwen3.8-27B-Humanlike-Chat-GGUF",
+      "artifact_filename": "Qwen3.8-27B-Humanlike-Chat-IQ4_XS.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 26895998464,
+      "published_at": "2026-08-26T08:05:17.000Z",
+      "downloads": 44377,
+      "quant_type": "IQ4_XS",
+      "file_size_bytes": 13447999232,
+      "vram_required_bytes": 20858358939,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.656098055315534,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.2,
+        13.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.98,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 46,
+      "model_id": "tsaipifong/Swift-1.5-Qwen3.8-27b-MXFP4-GGUF",
+      "artifact_repo_id": "tsaipifong/Swift-1.5-Qwen3.8-27b-MXFP4-GGUF",
+      "artifact_filename": "Swift-1.5-Qwen3.8-27B-MXFP4-A-outQ6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-10-03T04:12:12.000Z",
+      "downloads": 0,
+      "quant_type": "MXFP4",
+      "file_size_bytes": 14514120736,
+      "vram_required_bytes": 22008333308,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.48298028103161,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.1,
+        13.6
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.9,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "other"
+    },
+    {
+      "rank": 47,
+      "model_id": "ReadyArt/gemma-4-31B-it-scotoma-2-GGUF",
+      "artifact_repo_id": "ReadyArt/gemma-4-31B-it-scotoma-2-GGUF",
+      "artifact_filename": "gemma-4-31B-scotoma-2-Q3_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 30697345596,
+      "published_at": "2026-08-06T06:19:06.000Z",
+      "downloads": 234603,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 13430088698,
+      "vram_required_bytes": 21590988328,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.334271092094019,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.0,
+        13.3
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.89,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 48,
+      "model_id": "tvall43/Qwen3.6-14B-A3B-FableVibes-GGUF",
+      "artifact_repo_id": "tvall43/Qwen3.6-14B-A3B-FableVibes-GGUF",
+      "artifact_filename": "Qwen3.6-14B-A3B-FableVibes-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 13759378048,
+      "published_at": "2026-06-14T21:38:28.000Z",
+      "downloads": 356994,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 11179494664,
+      "vram_required_bytes": 14928780808,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 33.54,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 49,
+      "model_id": "kataguru/Qwen3.8-27B-Titan-v3.2-GGUF",
+      "artifact_repo_id": "kataguru/Qwen3.8-27B-Titan-v3.2-GGUF",
+      "artifact_filename": "Qwen3.8-27B-Titan-v3.2-IQ4_XS.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 26895998464,
+      "published_at": "2026-10-01T15:03:45.000Z",
+      "downloads": 0,
+      "quant_type": "IQ4_XS",
+      "file_size_bytes": 13447999232,
+      "vram_required_bytes": 20858358939,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.656098055315534,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.2,
+        13.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.51,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 50,
+      "model_id": "Rami8612/Qwen3.8-27B-Solidity-v1-GGUF",
+      "artifact_repo_id": "Rami8612/Qwen3.8-27B-Solidity-v1-GGUF",
+      "artifact_filename": "Qwen3.8-27B-Solidity-v1-Q4_K_M-imat.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-10-03T15:02:15.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15367892544,
+      "vram_required_bytes": 22862105116,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.011703598752078,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.8,
+        12.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.38,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 51,
+      "model_id": "rawmodels/Qwen3.8-27B-antislop-semdiv-grpo-GGUF",
+      "artifact_repo_id": "rawmodels/Qwen3.8-27B-antislop-semdiv-grpo-GGUF",
+      "artifact_filename": "Qwen3.8-27B-antislop-semdiv-grpo-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-10-02T16:57:40.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15367892544,
+      "vram_required_bytes": 22862105116,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.011703598752078,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.8,
+        12.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.38,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 52,
+      "model_id": "rawmodels/Qwen3.8-27B-antislop-pangram-joint-grpo-GGUF",
+      "artifact_repo_id": "rawmodels/Qwen3.8-27B-antislop-pangram-joint-grpo-GGUF",
+      "artifact_filename": "Qwen3.8-27B-antislop-pangram-joint-grpo-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-10-02T16:41:15.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15367892544,
+      "vram_required_bytes": 22862105116,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.011703598752078,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.8,
+        12.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.38,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 53,
+      "model_id": "rawmodels/Qwen3.8-27B-antislop-pangram-grpo-GGUF",
+      "artifact_repo_id": "rawmodels/Qwen3.8-27B-antislop-pangram-grpo-GGUF",
+      "artifact_filename": "Qwen3.8-27B-antislop-pangram-grpo-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-10-02T16:13:43.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15367892544,
+      "vram_required_bytes": 22862105116,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.011703598752078,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.8,
+        12.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.38,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 54,
+      "model_id": "wulezhi/qwen3.8-27b-buddhist",
+      "artifact_repo_id": "wulezhi/qwen3.8-27b-buddhist",
+      "artifact_filename": "gguf/Q4/qwen3.8-27b-Buddhist-16bit.Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-10-01T18:03:27.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15367892544,
+      "vram_required_bytes": 22862105116,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.011703598752078,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.8,
+        12.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 33.38,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 55,
+      "model_id": "bartowski/Qwen2.5-72B-Instruct-GGUF",
+      "artifact_repo_id": "bartowski/Qwen2.5-72B-Instruct-GGUF",
+      "artifact_filename": "Qwen2.5-72B-Instruct-Q3_K_L.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 72706203648,
+      "published_at": "2024-09-16T18:20:45.000Z",
+      "downloads": 73005,
+      "quant_type": "Q3_K_L",
+      "file_size_bytes": 31808964096,
+      "vram_required_bytes": 48264114168,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 3.518819401417579,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        2.1,
+        5.6
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 32.74,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "other"
+    },
+    {
+      "rank": 56,
+      "model_id": "MaziyarPanahi/gpt-oss-20b-Derestricted-GGUF",
+      "artifact_repo_id": "MaziyarPanahi/gpt-oss-20b-Derestricted-GGUF",
+      "artifact_filename": "gpt-oss-20b-Derestricted.Q3_K_L.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 20914757184,
+      "published_at": "2025-11-28T16:26:41.000Z",
+      "downloads": 82053,
+      "quant_type": "Q3_K_L",
+      "file_size_bytes": 9150206268,
+      "vram_required_bytes": 15379626634,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 12.232511128349133,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        7.3,
+        19.6
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 30.73,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 57,
+      "model_id": "Alittlehammmer/Qwen3.6-27B-DFlash-GGUF-llama.cpp",
+      "artifact_repo_id": "Alittlehammmer/Qwen3.6-27B-DFlash-GGUF-llama.cpp",
+      "artifact_filename": "Qwen3.6-27B-DFlash-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27000000000,
+      "published_at": "2026-06-29T06:02:21.000Z",
+      "downloads": 64672,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 15187500000,
+      "vram_required_bytes": 22618393824,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.106864197530864,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        4.9,
+        13.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 30.42,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 58,
+      "model_id": "bartowski/Meta-Llama-3.1-70B-Instruct-GGUF",
+      "artifact_repo_id": "bartowski/Meta-Llama-3.1-70B-Instruct-GGUF",
+      "artifact_filename": "Meta-Llama-3.1-70B-Instruct-Q3_K_L.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 70553706560,
+      "published_at": "2024-07-23T15:42:15.000Z",
+      "downloads": 95086,
+      "quant_type": "Q3_K_L",
+      "file_size_bytes": 30867246620,
+      "vram_required_bytes": 46897406565,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 3.6261737685238344,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        2.2,
+        5.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 28.94,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "llama3.1"
+    },
+    {
+      "rank": 59,
+      "model_id": "joycx/Qwen3.8-27B-Velocity-GGUF",
+      "artifact_repo_id": "joycx/Qwen3.8-27B-Velocity-GGUF",
+      "artifact_filename": "Velocity-Q5_K_M-Q8.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27320697856,
+      "published_at": "2026-10-02T14:14:39.000Z",
+      "downloads": 0,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 18782979776,
+      "vram_required_bytes": 26277192348,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 6.197483114406565,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        3.7,
+        9.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 28.69,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "cc-by-nc-sa-4.0"
+    },
+    {
+      "rank": 60,
+      "model_id": "reaperdoesntknow/Qwen3-1.7B-Distilled-30B-A3B-SFT-GGUF",
+      "artifact_repo_id": "reaperdoesntknow/Qwen3-1.7B-Distilled-30B-A3B-SFT-GGUF",
+      "artifact_filename": "qwen3-1.7b-distilled-30b-sft-Q5_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 30000000000,
+      "published_at": "2026-10-03T13:16:24.000Z",
+      "downloads": 0,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 20625000000,
+      "vram_required_bytes": 24374286144,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 56.43985454545455,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        19.8,
+        112.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 28.51,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 61,
+      "model_id": "reaperdoesntknow/Qwen3-0.6B-Distilled-30B-A3B-Thinking-SFT-GGUF",
+      "artifact_repo_id": "reaperdoesntknow/Qwen3-0.6B-Distilled-30B-A3B-Thinking-SFT-GGUF",
+      "artifact_filename": "qwen3-0.6b-distilled-30b-thinking-sft-Q5_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 30000000000,
+      "published_at": "2026-10-03T13:16:14.000Z",
+      "downloads": 0,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 20625000000,
+      "vram_required_bytes": 24374286144,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 56.43985454545455,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        19.8,
+        112.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 28.51,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 62,
+      "model_id": "unsloth/Qwen-AgentWorld-35B-A3B-GGUF",
+      "artifact_repo_id": "unsloth/Qwen-AgentWorld-35B-A3B-GGUF",
+      "artifact_filename": "Qwen-AgentWorld-35B-A3B-UD-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 34660610688,
+      "published_at": "2026-06-24T23:45:03.000Z",
+      "downloads": 349232,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 28161746184,
+      "vram_required_bytes": 31911032328,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 27.99,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 63,
+      "model_id": "unsloth/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF",
+      "artifact_repo_id": "unsloth/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF",
+      "artifact_filename": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-UD-Q6_K_XL.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 32913266240,
+      "published_at": "2026-08-12T13:25:37.000Z",
+      "downloads": 66349,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 26742028820,
+      "vram_required_bytes": 30491314964,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 27.85,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "other"
+    },
+    {
+      "rank": 64,
+      "model_id": "ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+      "artifact_repo_id": "ornith-ai/Ornith-1.5-35B-A3B-GGUF",
+      "artifact_filename": "Ornith-1.5-35B-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35505251456,
+      "published_at": "2026-08-18T06:38:41.000Z",
+      "downloads": 3547270,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 28848016808,
+      "vram_required_bytes": 32597302952,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 25.11,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "mit"
+    },
+    {
+      "rank": 65,
+      "model_id": "NANI-Nithin/K2-Horizon-MoVA-36B-A4B-GGUF",
+      "artifact_repo_id": "NANI-Nithin/K2-Horizon-MoVA-36B-A4B-GGUF",
+      "artifact_filename": "K2-Horizon-MoVA-36B-A4B-Q5_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 37444792020,
+      "published_at": "2026-09-03T21:43:57.000Z",
+      "downloads": 52496,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 25743294513,
+      "vram_required_bytes": 30042342705,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 42.32989091032414,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        14.8,
+        84.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 24.98,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 66,
+      "model_id": "MaziyarPanahi/Meta-Llama-3.1-70B-Instruct-GGUF",
+      "artifact_repo_id": "MaziyarPanahi/Meta-Llama-3.1-70B-Instruct-GGUF",
+      "artifact_filename": "Meta-Llama-3.1-70B-Instruct.Q3_K_L.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 70553706496,
+      "published_at": "2024-07-23T16:17:23.000Z",
+      "downloads": 137667,
+      "quant_type": "Q3_K_L",
+      "file_size_bytes": 30867246592,
+      "vram_required_bytes": 46897406525,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 3.6261737718131744,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        2.2,
+        5.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 24.94,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 67,
+      "model_id": "logic65/Whittle-Qwen-3.8-35B-A3B-GGUF",
+      "artifact_repo_id": "logic65/Whittle-Qwen-3.8-35B-A3B-GGUF",
+      "artifact_filename": "Whittle-Qwen-3.8-35B-A3B-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35547542656,
+      "published_at": "2026-10-03T13:34:43.000Z",
+      "downloads": 0,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 28882378408,
+      "vram_required_bytes": 32631664552,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 24.51,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 68,
+      "model_id": "na0x2c6/ELYZA-Thinking-1.0-llm-jp-4-32b-a3b-GGUF",
+      "artifact_repo_id": "na0x2c6/ELYZA-Thinking-1.0-llm-jp-4-32b-a3b-GGUF",
+      "artifact_filename": "ELYZA-Thinking-1.0-llm-jp-4-32b-a3b-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 32139028992,
+      "published_at": "2026-10-03T11:13:58.000Z",
+      "downloads": 0,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 26112961056,
+      "vram_required_bytes": 29862247200,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 24.18,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 69,
+      "model_id": "SC117/Qwen3.8-27B-Uncensored-FIT-GGUF",
+      "artifact_repo_id": "SC117/Qwen3.8-27B-Uncensored-FIT-GGUF",
+      "artifact_filename": "Qwen3.8-27B-Uncensored-FIT-13.5G-IQ4_XS.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 26895998464,
+      "published_at": "2026-10-03T10:26:36.000Z",
+      "downloads": 0,
+      "quant_type": "IQ4_XS",
+      "file_size_bytes": 13447999232,
+      "vram_required_bytes": 20858358939,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.656098055315534,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.2,
+        13.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 23.97,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 70,
+      "model_id": "nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2",
+      "artifact_repo_id": "nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2",
+      "artifact_filename": "GGUF/Q2-LynnStyle/mtp-Qwen3.8-27B-Q4_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27000000000,
+      "published_at": "2026-09-03T06:19:07.000Z",
+      "downloads": 58035,
+      "quant_type": "Q4_0",
+      "file_size_bytes": 13500000000,
+      "vram_required_bytes": 20930893824,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.788577777777776,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.3,
+        14.1
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 23.88,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 71,
+      "model_id": "logic65/Whittle-Next-27B-A3B-GGUF",
+      "artifact_repo_id": "logic65/Whittle-Next-27B-A3B-GGUF",
+      "artifact_filename": "Whittle-Next-27B-A3B-v4.4-Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27553461376,
+      "published_at": "2026-10-03T13:34:36.000Z",
+      "downloads": 0,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 22387187368,
+      "vram_required_bytes": 26136473512,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 23.68,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 72,
+      "model_id": "DavidAU/OpenAi-GPT-oss-20b-abliterated-uncensored-NEO-Imatrix-gguf",
+      "artifact_repo_id": "DavidAU/OpenAi-GPT-oss-20b-abliterated-uncensored-NEO-Imatrix-gguf",
+      "artifact_filename": "OpenAI-20B-NEO-CODE2-Plus-Uncensored-IQ4_NL.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 20914757184,
+      "published_at": "2025-08-07T22:20:03.000Z",
+      "downloads": 39764,
+      "quant_type": "IQ4_NL",
+      "file_size_bytes": 10457378592,
+      "vram_required_bytes": 16686798958,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 10.703447237305491,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        6.4,
+        17.1
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 23.63,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 73,
+      "model_id": "owao/surogate-rune-26b-a4b-systemone",
+      "artifact_repo_id": "owao/surogate-rune-26b-a4b-systemone",
+      "artifact_filename": "Rune-26B-A4B-v3-Q5_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 25233142046,
+      "published_at": "2026-10-03T04:50:23.000Z",
+      "downloads": 0,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 17347785156,
+      "vram_required_bytes": 21646833348,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 42.32989091061596,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        14.8,
+        84.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 23.24,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 74,
+      "model_id": "logic65/Whittle-Next-26B-A3B",
+      "artifact_repo_id": "logic65/Whittle-Next-26B-A3B",
+      "artifact_filename": "Whittle-Next-26B-A3B-Q8_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 26553382016,
+      "published_at": "2026-10-03T13:34:27.000Z",
+      "downloads": 0,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 28212968392,
+      "vram_required_bytes": 31962254536,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 31.60376470588235,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        11.1,
+        63.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 23.1,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 75,
+      "model_id": "MaziyarPanahi/mistral-small-3.1-24b-instruct-2503-hf-GGUF",
+      "artifact_repo_id": "MaziyarPanahi/mistral-small-3.1-24b-instruct-2503-hf-GGUF",
+      "artifact_filename": "mistral-small-3.1-24b-instruct-2503-hf.Q3_K_L.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 23572403200,
+      "published_at": "2025-03-18T10:00:14.000Z",
+      "downloads": 138347,
+      "quant_type": "Q3_K_L",
+      "file_size_bytes": 10312926400,
+      "vram_required_bytes": 17067073756,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 10.853369418015046,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        6.5,
+        17.4
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 22.79,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 76,
+      "model_id": "DevQuasar/amd.Instella-MoE-16B-A3B-Think-GGUF",
+      "artifact_repo_id": "DevQuasar/amd.Instella-MoE-16B-A3B-Think-GGUF",
+      "artifact_filename": "Q6_K/amd.Instella-MoE-16B-A3B-Think.f16.gguf.Q6_K.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 15862789248,
+      "published_at": "2026-07-31T14:03:46.000Z",
+      "downloads": 168149,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 12888516264,
+      "vram_required_bytes": 16637802408,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 45.919999999999995,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        16.1,
+        91.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 22.4,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 77,
+      "model_id": "JetBrains/Mellum2-12B-A2.5B-Instruct-GGUF-Q8_0",
+      "artifact_repo_id": "JetBrains/Mellum2-12B-A2.5B-Instruct-GGUF-Q8_0",
+      "artifact_filename": "Mellum2-12B-A2.5B-Instruct-Q8_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 12149923072,
+      "published_at": "2026-06-04T10:29:48.000Z",
+      "downloads": 191532,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 12909293264,
+      "vram_required_bytes": 16383698384,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 37.92451764705883,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        13.3,
+        75.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 21.67,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (32768) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 78,
+      "model_id": "bartowski/gemma-2-27b-it-GGUF",
+      "artifact_repo_id": "bartowski/gemma-2-27b-it-GGUF",
+      "artifact_filename": "gemma-2-27b-it-IQ4_XS.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 27227128320,
+      "published_at": "2024-06-27T17:54:57.000Z",
+      "downloads": 157449,
+      "quant_type": "IQ4_XS",
+      "file_size_bytes": 13613564160,
+      "vram_required_bytes": 19690366363,
+      "vram_available_bytes": 49392123904,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 8.550824650463909,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        5.1,
+        13.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 34.85,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Model max context 8192 < requested 32768; runtime will truncate or reject"
+      ],
+      "license": "gemma"
+    }
+  ]
+}

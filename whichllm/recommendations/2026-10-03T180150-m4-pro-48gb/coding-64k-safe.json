@@ -1,0 +1,565 @@
+
+{
+  "hardware": {
+    "gpus": [
+      {
+        "name": "Apple M4 Pro",
+        "vendor": "apple",
+        "vram_bytes": 51539607552,
+        "usable_vram_bytes": 50465865728,
+        "memory_bandwidth_gbps": 273.0,
+        "shared_memory": true
+      }
+    ],
+    "cpu": "Apple M4 Pro",
+    "cpu_cores": 14,
+    "ram_bytes": 51539607552,
+    "ram_budget_bytes": null,
+    "budget_notes": [
+      "VRAM headroom: 1.0 GB reserved per GPU"
+    ],
+    "os": "darwin"
+  },
+  "models": [
+    {
+      "rank": 1,
+      "model_id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "artifact_repo_id": "unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF",
+      "artifact_filename": "Qwen3-Coder-30B-A3B-Instruct-Q8_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 30532122624,
+      "published_at": "2025-07-31T07:04:55.000Z",
+      "downloads": 502146,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 32440380288,
+      "vram_required_bytes": 38798952576,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 31.60376470588235,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        11.1,
+        63.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 82.78,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 2,
+      "model_id": "Qwen/Qwen3-Coder-Next",
+      "artifact_repo_id": "unsloth/Qwen3-Coder-Next-GGUF",
+      "artifact_filename": "Qwen3-Coder-Next-Q3_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 79674391296,
+      "published_at": "2026-01-30T15:08:18.000Z",
+      "downloads": 596288,
+      "quant_type": "Q3_K_M",
+      "file_size_bytes": 34857546192,
+      "vram_required_bytes": 41216118480,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 60.22225398303504,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        21.1,
+        120.4
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 68.81,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 3,
+      "model_id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "artifact_repo_id": "Qwen/Qwen2.5-Coder-7B-Instruct-GGUF",
+      "artifact_filename": "qwen2.5-coder-7b-instruct-q4_k_m.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 7615616512,
+      "published_at": "2024-09-17T13:38:49.000Z",
+      "downloads": 2268419,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 4283784288,
+      "vram_required_bytes": 9981797412,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 28.74164330470601,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        17.2,
+        46.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 49.56,
+      "benchmark_status": "direct",
+      "benchmark_source": "direct",
+      "benchmark_confidence": 1.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 4,
+      "model_id": "payam1394/oioxo-coder-35b-a3b",
+      "artifact_repo_id": "payam1394/oioxo-coder-35b-a3b",
+      "artifact_filename": "oioxo-coder-35b-a3b-mtp-q4_k_m.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35505251456,
+      "published_at": "2026-10-03T12:33:04.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 19971703944,
+      "vram_required_bytes": 26330276232,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 72.96177777777778,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        25.5,
+        145.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 51.68,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (65536) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 5,
+      "model_id": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
+      "artifact_repo_id": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
+      "artifact_filename": "gemma4-coding-Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 11907350576,
+      "published_at": "2026-06-10T07:24:02.000Z",
+      "downloads": 393108,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 6697884699,
+      "vram_required_bytes": 13747283441,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 18.38237078317911,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        11.0,
+        29.4
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 50.4,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (65536) increases VRAM usage significantly"
+      ],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 6,
+      "model_id": "jica98/qwen3.5-4B-super-coder",
+      "artifact_repo_id": "jica98/qwen3.5-4B-super-coder",
+      "artifact_filename": "qwen3.5-4B-super-coder.Q4_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 4326350848,
+      "published_at": "2026-06-13T04:17:41.000Z",
+      "downloads": 36972,
+      "quant_type": "Q4_0",
+      "file_size_bytes": 2163175424,
+      "vram_required_bytes": 6825461208,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 54.847978894198086,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        32.9,
+        87.8
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 44.49,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (65536) increases VRAM usage significantly"
+      ],
+      "license": null
+    },
+    {
+      "rank": 7,
+      "model_id": "emperorofrome/Gmcoder",
+      "artifact_repo_id": "emperorofrome/Gmcoder",
+      "artifact_filename": "gmcoder.Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 9409813744,
+      "published_at": "2026-10-01T17:21:40.000Z",
+      "downloads": 0,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 5293020231,
+      "vram_required_bytes": 11555992017,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 23.261388512913094,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        14.0,
+        37.2
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 40.93,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (65536) increases VRAM usage significantly"
+      ],
+      "license": "mit"
+    },
+    {
+      "rank": 8,
+      "model_id": "Qwen/Qwen2.5-Coder-7B",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 7615616512,
+      "published_at": "2024-09-16T11:57:24.000Z",
+      "downloads": 560439,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 4283784288,
+      "vram_required_bytes": 9981797412,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 28.74164330470601,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        17.2,
+        46.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 35.95,
+      "benchmark_status": "estimated",
+      "benchmark_source": "variant",
+      "benchmark_confidence": 0.55,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 9,
+      "model_id": "Qwen/Qwen2.5-Coder-14B-Instruct",
+      "artifact_repo_id": "Qwen/Qwen2.5-Coder-14B-Instruct-GGUF",
+      "artifact_filename": "qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 14770033664,
+      "published_at": "2024-11-06T07:49:46.000Z",
+      "downloads": 1677950,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 8308143936,
+      "vram_required_bytes": 16258947260,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 14.819555480556373,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        8.9,
+        23.7
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 33.62,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 10,
+      "model_id": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "artifact_repo_id": "Qwen/Qwen2.5-Coder-3B-Instruct-GGUF",
+      "artifact_filename": "qwen2.5-coder-3b-instruct-q6_k.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 3085938688,
+      "published_at": "2024-11-06T07:49:38.000Z",
+      "downloads": 532911,
+      "quant_type": "Q6_K",
+      "file_size_bytes": 2507325184,
+      "vram_required_bytes": 6779028718,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 44.64119800425535,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        26.8,
+        71.4
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 30.33,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "other"
+    },
+    {
+      "rank": 11,
+      "model_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+      "artifact_repo_id": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+      "artifact_filename": "qwen2.5-coder-1.5b-instruct-q8_0.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 1543714304,
+      "published_at": "2024-09-18T09:41:47.000Z",
+      "downloads": 497285,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 1640196448,
+      "vram_required_bytes": 5426282788,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 61.417643065155566,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        36.9,
+        98.3
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 27.33,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 12,
+      "model_id": "Qwen/Qwen2.5-Coder-1.5B",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 1543714304,
+      "published_at": "2024-09-18T09:41:38.000Z",
+      "downloads": 393447,
+      "quant_type": "Q8_0",
+      "file_size_bytes": 1640196448,
+      "vram_required_bytes": 5426282788,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 61.417643065155566,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        36.9,
+        98.3
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 27.33,
+      "benchmark_status": "estimated",
+      "benchmark_source": "line_interp",
+      "benchmark_confidence": 0.26,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "apache-2.0"
+    },
+    {
+      "rank": 13,
+      "model_id": "ooptimum/Humo-Coder-35B-A3B-GGUF",
+      "artifact_repo_id": "ooptimum/Humo-Coder-35B-A3B-GGUF",
+      "artifact_filename": "Humo-Coder-35B-A3B-Q5_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 35505251456,
+      "published_at": "2026-10-02T07:04:21.000Z",
+      "downloads": 0,
+      "quant_type": "Q5_K_M",
+      "file_size_bytes": 24409860376,
+      "vram_required_bytes": 30768432664,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 56.43985454545455,
+      "speed_confidence": "low",
+      "speed_range_tok_per_sec": [
+        19.8,
+        112.9
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "MoE speed uses active parameters plus a bandwidth-scaled dispatch/read floor.",
+        "Apple Silicon MoE throughput is especially sensitive to Metal/MLX runtime kernels."
+      ],
+      "quality_score": 24.94,
+      "benchmark_status": "none",
+      "benchmark_source": "none",
+      "benchmark_confidence": 0.0,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Large context (65536) increases VRAM usage significantly"
+      ],
+      "license": "mit"
+    },
+    {
+      "rank": 14,
+      "model_id": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+      "artifact_repo_id": null,
+      "artifact_filename": null,
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 15706484224,
+      "published_at": "2024-06-14T06:23:33.000Z",
+      "downloads": 913931,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 8834897376,
+      "vram_required_bytes": 17080571210,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 13.935985304646962,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        8.4,
+        22.3
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type.",
+        "This is a synthetic GGUF estimate for an official repo, not a measured GGUF file."
+      ],
+      "quality_score": 24.5,
+      "benchmark_status": "self_reported",
+      "benchmark_source": "self_reported",
+      "benchmark_confidence": 0.4,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [],
+      "license": "other"
+    },
+    {
+      "rank": 15,
+      "model_id": "QuantFactory/Qwen2.5-Coder-7B-GGUF",
+      "artifact_repo_id": "QuantFactory/Qwen2.5-Coder-7B-GGUF",
+      "artifact_filename": "Qwen2.5-Coder-7B.Q4_K_M.gguf",
+      "local_match": false,
+      "local_path": null,
+      "parameter_count": 7615616512,
+      "published_at": "2024-09-19T05:21:50.000Z",
+      "downloads": 57428,
+      "quant_type": "Q4_K_M",
+      "file_size_bytes": 4283784288,
+      "vram_required_bytes": 9981797412,
+      "vram_available_bytes": 50465865728,
+      "uses_multi_gpu": false,
+      "multi_gpu_effective_vram_bytes": null,
+      "estimated_tok_per_sec": 28.74164330470601,
+      "speed_confidence": "medium",
+      "speed_range_tok_per_sec": [
+        17.2,
+        46.0
+      ],
+      "speed_notes": [
+        "Speed is estimated from memory bandwidth, quantization, backend, and fit type."
+      ],
+      "quality_score": 36.46,
+      "benchmark_status": "estimated",
+      "benchmark_source": "base_model",
+      "benchmark_confidence": 0.6,
+      "fit_type": "full_gpu",
+      "can_run": true,
+      "warnings": [
+        "Model max context 32768 < requested 65536; runtime will truncate or reject"
+      ],
+      "license": "apache-2.0"
+    }
+  ]
+}

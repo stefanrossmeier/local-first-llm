@@ -1,0 +1,116 @@
+
+{
+  "model": {
+    "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "parameter_count": 30532122624,
+    "architecture": "qwen3moe",
+    "context_length": null,
+    "license": "apache-2.0"
+  },
+  "target_quant": "Q4_K_M",
+  "context_length": 65536,
+  "vram_by_quant": {
+    "Q2_K": {
+      "vram_bytes": 15899860608,
+      "quality_loss": 0.25
+    },
+    "Q3_K_M": {
+      "vram_bytes": 19716375936,
+      "quality_loss": 0.08
+    },
+    "Q4_K_M": {
+      "vram_bytes": 23532891264,
+      "quality_loss": 0.05
+    },
+    "Q5_K_M": {
+      "vram_bytes": 27349406592,
+      "quality_loss": 0.03
+    },
+    "Q6_K": {
+      "vram_bytes": 31165921920,
+      "quality_loss": 0.02
+    },
+    "Q8_0": {
+      "vram_bytes": 38798952576,
+      "quality_loss": 0.01
+    },
+    "F16": {
+      "vram_bytes": 67422817536,
+      "quality_loss": 0.0
+    }
+  },
+  "gpu_compatibility": [
+    {
+      "name": "RTX 4060",
+      "vram_gb": 8,
+      "fit_type": "too_small",
+      "estimated_tok_per_sec": null
+    },
+    {
+      "name": "RTX 3060",
+      "vram_gb": 12,
+      "fit_type": "partial_offload",
+      "estimated_tok_per_sec": 52.8
+    },
+    {
+      "name": "RTX 4070",
+      "vram_gb": 12,
+      "fit_type": "partial_offload",
+      "estimated_tok_per_sec": 73.8
+    },
+    {
+      "name": "RTX 4080",
+      "vram_gb": 16,
+      "fit_type": "partial_offload",
+      "estimated_tok_per_sec": 73.8
+    },
+    {
+      "name": "RTX 4090",
+      "vram_gb": 24,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 164.0
+    },
+    {
+      "name": "RX 7900 XTX",
+      "vram_gb": 24,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 164.0
+    },
+    {
+      "name": "RTX 5090",
+      "vram_gb": 32,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 229.6
+    },
+    {
+      "name": "A100 40GB",
+      "vram_gb": 40,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 199.2
+    },
+    {
+      "name": "L40S",
+      "vram_gb": 48,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 164.0
+    },
+    {
+      "name": "A100 80GB",
+      "vram_gb": 80,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 261.2
+    },
+    {
+      "name": "H100",
+      "vram_gb": 80,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 429.1
+    },
+    {
+      "name": "H200",
+      "vram_gb": 141,
+      "fit_type": "full_gpu",
+      "estimated_tok_per_sec": 614.9
+    }
+  ]
+}

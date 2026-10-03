@@ -1,0 +1,78 @@
+{
+  "schema": "local-first-llm/omlx-benchmark-v1",
+  "captured_at_utc": "2026-09-12T12:45:51.871956+00:00",
+  "model": "Qwen3.8-27B-4bit",
+  "provider": "omlx",
+  "endpoint": "http://127.0.0.1:8000",
+  "max_tokens": 256,
+  "stream": false,
+  "prompt": "Write a very detailed technical essay explaining how virtual memory works in a modern operating system. Continue with substantial detail and do not finish early.",
+  "warmup": {
+    "prompt_tokens": 79,
+    "completion_tokens": 256,
+    "wall_seconds": 17.59842416599986,
+    "wall_tps": 14.5467570042204,
+    "provider_total_time": 17.6,
+    "provider_generation_duration": null,
+    "provider_generation_tps": null,
+    "provider_ttft": null
+  },
+  "runs": [
+    {
+      "prompt_tokens": 79,
+      "completion_tokens": 256,
+      "wall_seconds": 17.548352292000345,
+      "wall_tps": 14.588264227901389,
+      "provider_total_time": 17.55,
+      "provider_generation_duration": null,
+      "provider_generation_tps": null,
+      "provider_ttft": null
+    },
+    {
+      "prompt_tokens": 79,
+      "completion_tokens": 256,
+      "wall_seconds": 17.52128512499985,
+      "wall_tps": 14.610800416387962,
+      "provider_total_time": 17.52,
+      "provider_generation_duration": null,
+      "provider_generation_tps": null,
+      "provider_ttft": null
+    },
+    {
+      "prompt_tokens": 79,
+      "completion_tokens": 256,
+      "wall_seconds": 17.50337620800019,
+      "wall_tps": 14.625749738669915,
+      "provider_total_time": 17.5,
+      "provider_generation_duration": null,
+      "provider_generation_tps": null,
+      "provider_ttft": null
+    }
+  ],
+  "summary": {
+    "num_runs": 3,
+    "mean_wall_tps": 14.608271460986423,
+    "median_wall_tps": 14.610800416387962,
+    "min_wall_tps": 14.588264227901389,
+    "max_wall_tps": 14.625749738669915
+  },
+  "provider_models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "Qwen3.8-27B-4bit",
+        "object": "model",
+        "created": 1789217081,
+        "owned_by": "omlx",
+        "max_model_len": 262144
+      },
+      {
+        "id": "mlx-community--Qwen3.8-27B-4bit",
+        "object": "model",
+        "created": 1789217081,
+        "owned_by": "omlx",
+        "max_model_len": 262144
+      }
+    ]
+  }
+}

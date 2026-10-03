@@ -27,6 +27,15 @@ The main performance lesson from this setup is simple:
 ├── docs/
 │   ├── benchmarking.md
 │   └── troubleshooting.md
+├── llmfit/
+│   ├── README.md
+│   ├── benchmarks/
+│   ├── recommendations/
+│   └── scripts/
+├── whichllm/
+│   ├── README.md
+│   ├── recommendations/
+│   └── scripts/
 └── scripts/
     ├── benchmark-api.sh
     ├── common.sh
@@ -445,3 +454,14 @@ See [`llmfit/`](llmfit/) for:
 - reproducible benchmark scripts;
 - upstream benchmark contributions to the llmfit community dataset.
 
+## Model selection with whichllm
+
+The repository also contains a lightweight `whichllm` experiment harness. It
+uses current Hugging Face and benchmark data to rank models that appear to fit
+the local machine and captures 32K/64K general, coding, strict-evidence, and
+conservative recommendations.
+
+See [`whichllm/`](whichllm/) for the scripts and interpretation notes. On Apple
+Silicon, `whichllm` currently ranks GGUF-backed candidates, so use it as a
+candidate-discovery and fit cross-check. Validate promising models with the
+repository's actual MLX/oMLX benchmark workflow before adopting them.

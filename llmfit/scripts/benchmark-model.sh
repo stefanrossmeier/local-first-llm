@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+cat >&2 <<'EOF'
+ERROR: llmfit 1.1.15 OpenAI-compatible benchmarking is disabled in this
+repository.
+
+The MLX/oMLX benchmark currently measures request latency before consuming
+the complete response body, producing invalid throughput values.
+
+Use instead:
+
+  ./llmfit/scripts/benchmark-omlx.py
+
+See the Qwen3.8 invalid benchmark record under llmfit/benchmarks/ for the
+reproduction.
+EOF
+
+exit 1
+
 if [[ $# -lt 1 ]]; then
   echo "Usage:"
   echo "  $0 <model-id>"
