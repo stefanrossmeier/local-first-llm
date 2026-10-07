@@ -7,7 +7,20 @@ source "$SCRIPT_DIR/common.sh"
 TARGET="$HOME/.omlx/model_settings.json"
 mkdir -p "$HOME/.omlx"
 
-MODEL_ID="$MODEL_ID" TARGET="$TARGET" python3 <<'PY'
+export MODEL_ID TARGET
+export MODEL_MAX_CONTEXT_WINDOW="${MODEL_MAX_CONTEXT_WINDOW:-}"
+export MODEL_ENABLE_THINKING="${MODEL_ENABLE_THINKING:-}"
+export MODEL_PRESERVE_THINKING="${MODEL_PRESERVE_THINKING:-}"
+export MODEL_THINKING_BUDGET_ENABLED="${MODEL_THINKING_BUDGET_ENABLED:-}"
+export MODEL_MTP_ENABLED="${MODEL_MTP_ENABLED:-}"
+export MODEL_QWEN35_ANE_PREFILL_ENABLED="${MODEL_QWEN35_ANE_PREFILL_ENABLED:-}"
+export MODEL_TURBOQUANT_KV_ENABLED="${MODEL_TURBOQUANT_KV_ENABLED:-}"
+export MODEL_QWEN35_OQ_A8_ENABLED="${MODEL_QWEN35_OQ_A8_ENABLED:-}"
+export MODEL_SPEC_PREFILL_ENABLED="${MODEL_SPEC_PREFILL_ENABLED:-}"
+export MODEL_DFLASH_ENABLED="${MODEL_DFLASH_ENABLED:-}"
+export MODEL_MOE_EXPERT_OFFLOAD_ENABLED="${MODEL_MOE_EXPERT_OFFLOAD_ENABLED:-}"
+
+python3 <<'PY'
 import json
 import os
 from pathlib import Path
@@ -27,11 +40,33 @@ data.setdefault("version", 1)
 models = data.setdefault("models", {})
 settings = models.setdefault(model_id, {})
 
-# Keep reasoning enabled, but let the client choose low/medium/high effort.
-# Do not preserve old thinking traces in subsequent turns.
-settings["enable_thinking"] = True
-settings["preserve_thinking"] = False
-settings["thinking_budget_enabled"] = False
+
+def parse_bool(value: str) -> bool:
+    normalized = value.strip().lower()
+    if normalized in {"1", "true", "yes", "on"}:
+        return True
+    if normalized in {"0", "false", "no", "off"}:
+        return False
+    raise SystemExit(f"Invalid boolean value: {value!r}")
+
+
+def set_if_env(env_name: str, setting_name: str, converter):
+    value = os.environ.get(env_name)
+    if value is not None and value != "":
+        settings[setting_name] = converter(value)
+
+
+set_if_env("MODEL_MAX_CONTEXT_WINDOW", "max_context_window", int)
+set_if_env("MODEL_ENABLE_THINKING", "enable_thinking", parse_bool)
+set_if_env("MODEL_PRESERVE_THINKING", "preserve_thinking", parse_bool)
+set_if_env("MODEL_THINKING_BUDGET_ENABLED", "thinking_budget_enabled", parse_bool)
+set_if_env("MODEL_MTP_ENABLED", "mtp_enabled", parse_bool)
+set_if_env("MODEL_QWEN35_ANE_PREFILL_ENABLED", "qwen35_ane_prefill_enabled", parse_bool)
+set_if_env("MODEL_TURBOQUANT_KV_ENABLED", "turboquant_kv_enabled", parse_bool)
+set_if_env("MODEL_QWEN35_OQ_A8_ENABLED", "qwen35_oq_a8_enabled", parse_bool)
+set_if_env("MODEL_SPEC_PREFILL_ENABLED", "specprefill_enabled", parse_bool)
+set_if_env("MODEL_DFLASH_ENABLED", "dflash_enabled", parse_bool)
+set_if_env("MODEL_MOE_EXPERT_OFFLOAD_ENABLED", "moe_expert_offload_enabled", parse_bool)
 
 path.write_text(json.dumps(data, indent=2) + "\n")
 print(f"Updated {path} for {model_id}")

@@ -1,0 +1,26 @@
+{
+  "model": "Qwen3.8-35B-A3B-Distill-mlx-4Bit",
+  "stream": true,
+  "max_tokens": null,
+  "temperature": null,
+  "message_count": 3,
+  "tool_count": 55,
+  "messages": [
+    {
+      "index": 0,
+      "role": "system",
+      "chars": 22974
+    },
+    {
+      "index": 1,
+      "role": "user",
+      "chars": 3137
+    },
+    {
+      "index": 2,
+      "role": "user",
+      "chars": 792
+    }
+  ],
+  "tools_chars": 70942
+}

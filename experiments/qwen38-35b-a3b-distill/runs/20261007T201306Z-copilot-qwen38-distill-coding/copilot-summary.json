@@ -1,0 +1,43 @@
+{
+  "requests": [
+    {
+      "stem": "20261007-222234-331",
+      "model": "Qwen3.8-35B-A3B-Distill-mlx-4Bit",
+      "message_count": 3,
+      "messages_chars": 27203,
+      "tool_count": 55,
+      "tools_chars": 70942,
+      "status_code": 200,
+      "wall_s": 33.080475333030336,
+      "proxy_first_visible_s": 31.574745957972482,
+      "prompt_tokens": 23465,
+      "completion_tokens": 102,
+      "cached_tokens": 0,
+      "ttft_s": 31.51,
+      "visible_ttft_s": 31.51,
+      "pp_tps": 744.75,
+      "tg_tps": 67.71,
+      "finish_reason": "stop"
+    },
+    {
+      "stem": "20261007-222345-955",
+      "model": "Qwen3.8-35B-A3B-Distill-mlx-4Bit",
+      "message_count": 3,
+      "messages_chars": 26903,
+      "tool_count": 55,
+      "tools_chars": 70942,
+      "status_code": 200,
+      "wall_s": 6.161352249910124,
+      "proxy_first_visible_s": 5.059299249900505,
+      "prompt_tokens": 23365,
+      "completion_tokens": 75,
+      "cached_tokens": 20480,
+      "ttft_s": 4.99,
+      "visible_ttft_s": 4.99,
+      "pp_tps": 577.87,
+      "tg_tps": 67.93,
+      "finish_reason": "stop"
+    }
+  ],
+  "request_count": 2
+}

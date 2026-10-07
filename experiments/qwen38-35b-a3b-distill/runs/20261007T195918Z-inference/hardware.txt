@@ -1,0 +1,13 @@
+Hardware:
+
+    Hardware Overview:
+
+      Model Name: MacBook Pro
+      Model Identifier: Mac16,7
+      Model Number: Z1FU000AWD/A
+      Chip: Apple M4 Pro
+      Total Number of Cores: 14 (10 performance and 4 efficiency)
+      Memory: 48 GB
+      System Firmware Version: 13822.81.10
+      OS Loader Version: 11881.140.96
+

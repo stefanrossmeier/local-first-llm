@@ -2,16 +2,51 @@
 
 Run a strong local coding LLM on Apple Silicon and use it from VS Code GitHub Copilot Chat through an OpenAI-compatible endpoint.
 
-This repository documents a working setup built around:
+This repository documents two local Apple-Silicon paths:
 
-- **Qwen3.8-27B 4-bit MLX** (`mlx-community/Qwen3.8-27B-4bit`)
+- **Qwen3.8-27B 4-bit MLX** (`mlx-community/Qwen3.8-27B-4bit`) as the original dense quality baseline
+- **Qwen3.8-35B-A3B-Distill 4-bit MLX** (`nvythong/Qwen3.8-35B-A3B-Distill-mlx-4Bit`) as the current fast sparse-MoE experiment
 - **oMLX** for Apple-Silicon inference, continuous batching, and persistent prefix/KV caching
 - **VS Code Custom Endpoint / Copilot Chat** for the coding UI
 - an optional **inspection proxy** that shows how much context and how many tool schemas Copilot actually sends
 
 The main performance lesson from this setup is simple:
 
-> For local Copilot Chat, prompt construction can matter more than raw decode speed. Reducing the advertised Copilot tools from 89 to 10 cut a trivial request from roughly 30K input tokens to roughly 9K tokens, and oMLX prefix caching made subsequent warm requests much faster.
+> Local coding-agent performance is not one number. Prompt prefill, token generation, prefix-cache reuse, context length, and concurrency all matter. For Copilot Chat specifically, repeated system/tool prefixes can dominate the experience, so prompt size and cache reuse matter as much as raw decode speed.
+
+## Fast MoE experiment: Qwen3.8-35B-A3B-Distill
+
+The repository now contains a reproducible inference-engineering experiment for the community **Qwen3.8-35B-A3B-Distill** model. It distills Qwen3.8 teacher behavior into the Qwen3.6-35B-A3B sparse MoE architecture: roughly 35B total parameters with about 3B active per token. This is **not an official Alibaba/Qwen Qwen3.8 release**; the distillation is published by Empero and this repository uses a pinned community MLX 4-bit conversion.
+
+On the validated M4 Pro / 48 GB machine with oMLX 0.7.0, the baseline run measured:
+
+| Context | Prefill (PP) | Decode (TG) | TTFT |
+|---:|---:|---:|---:|
+| ~1K | 894.6 tok/s | 90.6 tok/s | 1.15 s |
+| ~4K | 950.8 tok/s | 87.3 tok/s | 4.30 s |
+| ~8K | 932.2 tok/s | 83.1 tok/s | 8.79 s |
+| ~16K | 828.5 tok/s | 76.0 tok/s | 19.77 s |
+| ~32K | 676.2 tok/s | 66.0 tok/s | 47.94 s |
+
+Prefix reuse changed an ~8K request from **8.80 s TTFT cold** to **2.47 s TTFT warm** with 6,144 cached tokens. In a real VS Code Copilot capture with 55 enabled tools and a ~23K-token prompt, the first request took 31.51 s to first token; a highly similar second request reused 20,480 prompt tokens and reached first token in 4.99 s. The model was subjectively interactive enough for real coding work.
+
+These numbers are deliberately a **bare-model baseline** for the current MLX artifact: MTP, Qwen ANE prefill, TurboQuant KV, Qwen oQ A8, SpecPrefill, DFlash, and MoE expert offload were all disabled. Prefix/KV caching and normal oMLX serving remain enabled. The run also reported the optional Qwen prefill/decode custom kernels as unavailable, so these results leave meaningful optimization headroom.
+
+Read the experiment before interpreting the numbers:
+
+- [`docs/qwen38-35b-a3b-distill-experiment.md`](docs/qwen38-35b-a3b-distill-experiment.md) — exact setup, results, Copilot capture, limitations, and conclusions
+- [`docs/inference-engineering.md`](docs/inference-engineering.md) — PP/TG/TTFT/TPOT, cache behavior, goodput, and the planned MTP/prefill optimization ladder
+- [`experiments/qwen38-35b-a3b-distill/`](experiments/qwen38-35b-a3b-distill/) — raw machine-readable evidence retained for reproducibility
+
+Quick start for this profile:
+
+```bash
+./scripts/setup-qwen38-distill.sh
+./scripts/start.sh
+./scripts/run-inference-benchmarks.sh
+```
+
+For VS Code, merge `config/chatLanguageModels.provider.qwen38-35b-a3b-distill.json` into the Language Models custom-endpoint configuration and select **Qwen3.8 35B-A3B Distill MLX**.
 
 ## Repository layout
 
@@ -56,7 +91,7 @@ The main performance lesson from this setup is simple:
 - macOS 15 or newer for current oMLX releases
 - Homebrew
 - Python 3
-- about **16 GB** of storage for the Qwen3.8-27B 4-bit MLX model, plus cache/log headroom
+- about **16 GB** for the dense Qwen3.8-27B profile or **20 GB** for the Qwen3.8-35B-A3B-Distill 4-bit profile, plus cache/log headroom
 - VS Code with the current GitHub Copilot Chat / language-model features
 
 This repository was developed and measured with **oMLX 0.6.3rc2**. oMLX evolves quickly, so newer versions can change CLI flags, model support, and performance.
@@ -375,7 +410,9 @@ tail -f ~/llm/logs/omlx.log
 
 See [`docs/benchmarking.md`](docs/benchmarking.md) for the measured numbers and methodology.
 
-## Observed performance
+## Observed performance: dense Qwen3.8-27B baseline
+
+The newer sparse-MoE result is documented in [`docs/qwen38-35b-a3b-distill-experiment.md`](docs/qwen38-35b-a3b-distill-experiment.md). The measurements below are the earlier dense Qwen3.8-27B baseline.
 
 On the M4 Pro / 48 GB machine used while building this setup:
 
@@ -435,6 +472,8 @@ Update/re-download the model files:
 
 - oMLX: https://github.com/jundot/omlx
 - Qwen3.8-27B 4-bit MLX: https://huggingface.co/mlx-community/Qwen3.8-27B-4bit
+- Qwen3.8-35B-A3B-Distill base/distill: https://huggingface.co/empero-ai/Qwen3.8-35B-A3B-Distill
+- Qwen3.8-35B-A3B-Distill MLX conversion used here: https://huggingface.co/nvythong/Qwen3.8-35B-A3B-Distill-mlx-4Bit
 - VS Code language model / Custom Endpoint docs: https://code.visualstudio.com/docs/agent-customization/language-models
 
 ## License

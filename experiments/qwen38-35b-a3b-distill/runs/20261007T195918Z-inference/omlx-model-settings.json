@@ -1,0 +1,13 @@
+{
+  "max_context_window": 32768,
+  "enable_thinking": true,
+  "preserve_thinking": false,
+  "thinking_budget_enabled": false,
+  "mtp_enabled": false,
+  "qwen35_ane_prefill_enabled": false,
+  "turboquant_kv_enabled": false,
+  "qwen35_oq_a8_enabled": false,
+  "specprefill_enabled": false,
+  "dflash_enabled": false,
+  "moe_expert_offload_enabled": false
+}

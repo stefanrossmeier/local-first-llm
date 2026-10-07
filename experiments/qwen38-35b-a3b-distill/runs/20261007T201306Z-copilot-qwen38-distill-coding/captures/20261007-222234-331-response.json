@@ -1,0 +1,26 @@
+{
+  "path": "/v1/chat/completions",
+  "status_code": 200,
+  "content_type": "text/event-stream; charset=utf-8",
+  "stream": true,
+  "first_visible_s": 31.574745957972482,
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 23465,
+    "completion_tokens": 102,
+    "total_tokens": 23567,
+    "input_tokens": 23465,
+    "output_tokens": 102,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "time_to_first_token": 31.51,
+    "time_to_first_visible_token": 31.51,
+    "total_time": 33.01,
+    "prompt_eval_duration": 31.51,
+    "generation_duration": 1.51,
+    "prompt_tokens_per_second": 744.75,
+    "generation_tokens_per_second": 67.71
+  },
+  "wall_s": 33.080475333030336
+}

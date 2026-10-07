@@ -62,12 +62,58 @@ def summarize_json(data):
     return summary
 
 
+def _response_metrics_from_json(data):
+    metrics = {}
+    if not isinstance(data, dict):
+        return metrics
+    usage = data.get("usage")
+    if isinstance(usage, dict):
+        metrics["usage"] = usage
+    choices = data.get("choices") or []
+    for choice in choices:
+        if isinstance(choice, dict) and choice.get("finish_reason"):
+            metrics["finish_reason"] = choice["finish_reason"]
+    return metrics
+
+
+def _update_stream_metrics(event_text, state, started):
+    for line in event_text.replace("\r\n", "\n").split("\n"):
+        if not line.startswith("data:"):
+            continue
+        payload = line[5:].strip()
+        if not payload or payload == "[DONE]":
+            continue
+        try:
+            data = json.loads(payload)
+        except json.JSONDecodeError:
+            continue
+
+        usage = data.get("usage")
+        if isinstance(usage, dict):
+            state["usage"] = usage
+
+        for choice in data.get("choices", []) or []:
+            if choice.get("finish_reason"):
+                state["finish_reason"] = choice["finish_reason"]
+            delta = choice.get("delta", {}) or {}
+            visible = delta.get("content") or delta.get("reasoning_content") or delta.get("tool_calls")
+            if visible and state.get("first_visible_s") is None:
+                state["first_visible_s"] = time.perf_counter() - started
+
+
+def _write_response_summary(path, summary):
+    path.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n")
+    print("=== COPILOT RESPONSE ===", flush=True)
+    print(json.dumps(summary, indent=2, ensure_ascii=False), flush=True)
+
+
 @app.api_route("/{path:path}", methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"])
 async def proxy(path: str, request: Request):
     body = await request.body()
     timestamp = time.strftime("%Y%m%d-%H%M%S")
     millis = int((time.time() % 1) * 1000)
     stem = f"{timestamp}-{millis:03d}"
+    response_path = LOG_DIR / f"{stem}-response.json"
 
     headers = dict(request.headers)
     headers.pop("host", None)
@@ -93,6 +139,7 @@ async def proxy(path: str, request: Request):
             print(f"Could not parse JSON body: {exc}", flush=True)
 
     client = httpx.AsyncClient(timeout=None)
+    started = time.perf_counter()
     upstream = await client.send(
         client.build_request(
             request.method,
@@ -109,13 +156,38 @@ async def proxy(path: str, request: Request):
         response_headers.pop(header, None)
 
     content_type = upstream.headers.get("content-type", "")
+    base_summary = {
+        "path": f"/{path}",
+        "status_code": upstream.status_code,
+        "content_type": content_type,
+        "stream": "text/event-stream" in content_type,
+    }
 
     if "text/event-stream" in content_type:
         async def iterator():
+            state = {"first_visible_s": None, "finish_reason": None, "usage": None}
+            parse_buffer = b""
             try:
                 async for chunk in upstream.aiter_bytes():
+                    parse_buffer += chunk
+                    while True:
+                        lf = parse_buffer.find(b"\n\n")
+                        crlf = parse_buffer.find(b"\r\n\r\n")
+                        candidates = [(lf, 2), (crlf, 4)]
+                        candidates = [(idx, width) for idx, width in candidates if idx >= 0]
+                        if not candidates:
+                            break
+                        idx, width = min(candidates, key=lambda item: item[0])
+                        event, parse_buffer = parse_buffer[:idx], parse_buffer[idx + width:]
+                        _update_stream_metrics(event.decode("utf-8", errors="replace"), state, started)
                     yield chunk
+                if parse_buffer:
+                    _update_stream_metrics(parse_buffer.decode("utf-8", errors="replace"), state, started)
             finally:
+                summary = dict(base_summary)
+                summary.update(state)
+                summary["wall_s"] = time.perf_counter() - started
+                _write_response_summary(response_path, summary)
                 await upstream.aclose()
                 await client.aclose()
 
@@ -127,6 +199,14 @@ async def proxy(path: str, request: Request):
         )
 
     content = await upstream.aread()
+    summary = dict(base_summary)
+    summary["wall_s"] = time.perf_counter() - started
+    try:
+        summary.update(_response_metrics_from_json(json.loads(content)))
+    except Exception:
+        pass
+    _write_response_summary(response_path, summary)
+
     await upstream.aclose()
     await client.aclose()
 

@@ -121,3 +121,20 @@ The MLX/oMLX path was therefore chosen for the Copilot integration in this repos
 - Use the same attached file and prompt.
 - Track prompt tokens as carefully as decode tokens/second.
 - For coding use, evaluate answer correctness as well as speed.
+
+## Inference-engineering suite: Qwen3.8-35B-A3B-Distill
+
+The newer sparse-MoE experiment uses a more complete benchmark than `benchmark-api.sh`:
+
+```bash
+./scripts/run-inference-benchmarks.sh
+```
+
+It records context scaling (PP/TG/TTFT/TPOT), cold-vs-warm prefix reuse, concurrency/tail latency, goodput, model memory, runtime status, and raw JSON suitable for later analysis.
+
+The first published baseline is intentionally a **bare model profile**: MTP, ANE prefill, TurboQuant KV, oQ A8, SpecPrefill, DFlash, and MoE expert offload are disabled so later performance work can be measured against a clean reference.
+
+See:
+
+- [`qwen38-35b-a3b-distill-experiment.md`](qwen38-35b-a3b-distill-experiment.md) for the measured result.
+- [`inference-engineering.md`](inference-engineering.md) for metric definitions and the future optimization plan.

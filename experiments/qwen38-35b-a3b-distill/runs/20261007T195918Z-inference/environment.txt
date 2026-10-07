@@ -1,0 +1,15 @@
+timestamp_utc=20261007T195918Z
+model_profile=qwen38-35b-a3b-distill
+hf_model=nvythong/Qwen3.8-35B-A3B-Distill-mlx-4Bit
+hf_model_revision=220dfec3e716bbae93bd66b643e36b2ffe6853ff
+model_id=Qwen3.8-35B-A3B-Distill-mlx-4Bit
+model_dir=~/llm/Models/MLX/Qwen3.8-35B-A3B-Distill-mlx-4Bit
+model_max_context_window=32768
+omlx_url=http://127.0.0.1:8000
+omlx_version=0.7.0
+repo_git_commit=e1ca09f7fa3e3194c188401ecdb6febdbf3ec9d5
+model_disk_bytes=19529326592
+kernel=Darwin 24.6.0 arm64
+ProductName:		macOS
+ProductVersion:		15.7.4
+BuildVersion:		24G517

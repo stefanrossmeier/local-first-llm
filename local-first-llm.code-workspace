@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "config"
+    },
+    {
+      "path": "copilot-proxy"
+    },
+    {
+      "path": "docs"
+    },
+    {
+      "path": "experiments"
+    },
+    {
+      "path": "llmfit"
+    },
+    {
+      "path": "logs"
+    },
+    {
+      "path": "scripts"
+    },
+    {
+      "path": "whichllm"
+    }
+  ],
+  "settings": {}
+}

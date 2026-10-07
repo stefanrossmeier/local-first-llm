@@ -21,8 +21,13 @@ echo "==> Tapping oMLX"
 brew tap jundot/omlx https://github.com/jundot/omlx
 
 echo "==> Installing/upgrading oMLX"
-if ! brew install omlx; then
-  cat <<'MSG'
+if brew list --formula omlx >/dev/null 2>&1; then
+  if ! brew upgrade omlx; then
+    echo "WARN: brew upgrade omlx failed; keeping the installed version." >&2
+  fi
+else
+  if ! brew install omlx; then
+    cat <<'MSG'
 
 oMLX installation failed.
 
@@ -33,7 +38,8 @@ review the tap and explicitly trust it, then rerun this script:
   brew trust jundot/omlx
 
 MSG
-  exit 1
+    exit 1
+  fi
 fi
 
 if command -v omlx >/dev/null 2>&1; then

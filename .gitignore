@@ -15,3 +15,6 @@ llmfit/.bench-store/
 # whichllm live Hugging Face / benchmark cache.
 # Point-in-time exported captures live under whichllm/recommendations/.
 whichllm/.cache/
+
+# zip
+*.zip
